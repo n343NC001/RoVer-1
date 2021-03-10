@@ -13,6 +13,11 @@ class PingCommand extends Command {
   }
 
   async fn (msg) {
-    msg.reply(`:ping_pong: Pong! Latency to Discord: ${this.client.ws.ping}ms.`)
+        return msg.reply([
+            'Pong!',
+            `🔂 **RTT**: **__ERROR__** ms`,
+            `💟 **Heartbeat**: ${Math.round(this.client.ws.ping)} ms`
+        ]);
+        console.log(`${math.round(this.client.ws.ping)}`);
   }
 }

@@ -7,7 +7,7 @@ class ReverifyCommand extends Command {
     super(client, {
       name: 'reverify',
       properName: 'Reverify',
-      aliases: ['roverreverify'],
+      aliases: ['asvreverify'],
       description: 'Displays instructions on how to reverify',
       userPermissions: []
     })

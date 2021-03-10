@@ -6,7 +6,7 @@ class UnbindAllGroupCommand extends Command {
     super(client, {
       name: 'unbindall',
       properName: 'UnbindAll',
-      aliases: ['roverunbindallgroupranks', 'unbindallgroupranks', 'unbindallranks'],
+      aliases: ['asvunbindallgroupranks', 'unbindallgroupranks', 'unbindallranks'],
       description: 'Unbind all group ranks'
     })
   }

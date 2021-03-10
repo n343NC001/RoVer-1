@@ -7,8 +7,8 @@ class NicknameGroupCommand extends Command {
     super(client, {
       name: 'nicknamegroup',
       properName: 'NicknameGroup',
-      aliases: ['rovernicknamegroup'],
-      description: "`<groupid>` Set the Group RoVer will use when setting users' nicknames.",
+      aliases: ['asvnicknamegroup'],
+      description: "`<groupid>` Set the Group ASv will use when setting users' nicknames.",
 
       args: [
         {

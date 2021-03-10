@@ -8,7 +8,7 @@ class TransferPlus extends Command {
     super(client, {
       name: 'transferplus',
       properName: 'Transfer Plus',
-      description: 'Transfer RoVer Plus ownership to someone else',
+      description: 'Transfer ASv Plus ownership to someone else',
       userPermissions: [],
       guildOnly: false,
 
@@ -25,7 +25,7 @@ class TransferPlus extends Command {
 
   async fn (msg, args) {
     if (!this.discordBot.isPremium()) {
-      return msg.reply('This command can only be run on RoVer Plus!')
+      return msg.reply('This command can only be run on ASv Plus!')
     }
 
     if (!args.user.match(/^\d+$/)) {
@@ -41,6 +41,6 @@ class TransferPlus extends Command {
 
     this.discordBot.updatePatrons()
 
-    return msg.reply(`Your RoVer Plus access has been transferred to user ${args.user}! If you wish to take access back yourself, just run the transfer command with yourself as the user.`)
+    return msg.reply(`Your ASv Plus access has been transferred to user ${args.user}! If you wish to take access back yourself, just run the transfer command with yourself as the user.`)
   }
 }

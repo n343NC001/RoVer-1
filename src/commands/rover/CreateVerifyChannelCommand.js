@@ -8,7 +8,7 @@ class CreateVerifyChannelCommand extends Command {
     super(client, {
       name: 'createverifychannel',
       properName: 'CreateVerifyChannel',
-      aliases: ['rovercreateverifychannel', 'createverify', 'createverificationchannel', 'createverification', 'createverifychannels'],
+      aliases: ['asvcreateverifychannel', 'createverify', 'createverificationchannel', 'createverification', 'createverifychannels'],
       description: 'Creates a channel category with verification instructions for new members and a channel for users to verify themselves'
     })
   }
@@ -75,7 +75,7 @@ class CreateVerifyChannelCommand extends Command {
 
       msg.reply(`Created channels ${verifyChannel} and ${instructionsChannel}. You can delete the default message in the instructions channel and replace it with your own if you wish.`)
     } catch (err) {
-      msg.reply(':no_entry_sign: RoVer does not have permission to create channels in this server.')
+      msg.reply(':no_entry_sign: ASv does not have permission to create channels in this server.')
     }
   }
 }

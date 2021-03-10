@@ -6,7 +6,7 @@ class JoinMessageCommand extends Command {
     super(client, {
       name: 'joindm',
       properName: 'JoinDM',
-      aliases: ['roverjoindm'],
+      aliases: ['asvjoindm'],
       description: '`<on|off>` Set whether or not new users will be automatically direct messaged when joining this server. Default on',
 
       args: [

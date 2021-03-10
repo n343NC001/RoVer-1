@@ -24,7 +24,7 @@ class LookupCommand extends Command {
 
   async fn (msg, args) {
     if (!config.reverseLookupApiKey) {
-      return msg.reply('Sorry, reverse lookup is only available on official versions of RoVer.')
+      return msg.reply('Sorry, reverse lookup is only available on official versions of ASv.')
     }
 
     const userId = args.id

@@ -37,7 +37,7 @@ class UpdateCommand extends Command {
     super(client, {
       name: 'update',
       properName: 'Update',
-      aliases: ['roverupdate'],
+      aliases: ['asvupdate'],
       description: '`<Discord User>` Forcibly update verification status of a user, same as them running !verify. Make sure you @mention the user.',
       throttling: { usages: 1, duration: 10 }, // 1 usage every 10 seconds
 
@@ -52,7 +52,7 @@ class UpdateCommand extends Command {
   }
 
   hasPermission (msg) {
-    return this.client.isOwner(msg.author) || msg.member.hasPermission(this.userPermissions) || msg.member.roles.cache.find(role => role.name === 'RoVer Admin') || msg.member.roles.cache.find(role => role.name === 'RoVer Updater')
+    return this.client.isOwner(msg.author) || msg.member.hasPermission(this.userPermissions) || msg.member.roles.cache.find(role => role.id === '808705443161047040') || msg.member.roles.cache.find(role => role.id === '808705443161047040')
   }
 
   async fn (msg, args) {
@@ -68,7 +68,7 @@ class UpdateCommand extends Command {
 
       member.verify({ message: msg, skipWelcomeMessage: true })
     } else if (!this.discordBot.isPremium()) {
-      return msg.reply('Sorry, updating more than one user is only available with RoVer Plus: <https://www.patreon.com/erynlynn>.')
+      return msg.reply('Sorry, updating more than one user is only available with ASv Plus: <https://www.patreon.com/erynlynn>.')
     } else { // They want to update a whole role (premium feature)
       const roleMembers = target.members.array()
       const affectedCount = roleMembers.length // # of affected users
@@ -80,7 +80,7 @@ class UpdateCommand extends Command {
 
       const limit = config.massUpdateLimit || 0
       if (affectedCount > limit) {
-        return msg.reply(`Sorry, but RoVer only supports updating up to ${limit} members at once. Updating this role would affect approximately ${affectedCount} members.`)
+        return msg.reply(`Sorry, but ASv only supports updating up to ${limit} members at once. Updating this role would affect approximately ${affectedCount} members.`)
       }
 
       server.ongoingBulkUpdate = true

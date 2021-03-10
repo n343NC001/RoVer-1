@@ -359,14 +359,14 @@ class DiscordServer {
 
       if (this.server.systemChannel) {
         try {
-          await this.server.systemChannel.send(`${this.server.owner} An important notice was triggered and there is no announcement channel configured and the server owner will not accept DMs from RoVer, so it has been posted here:`, { embed })
+          await this.server.systemChannel.send(`${this.server.owner} An important notice was triggered and there is no announcement channel configured and the server owner will not accept DMs from ASv, so it has been posted here:`, { embed })
           return
         } catch (e) {}
       }
 
       if (options.lastResortChannel) {
         try {
-          await options.lastResortChannel.send(`${this.server.owner} An important notice was triggered and there is no announcement channel configured and the server owner will not accept DMs from RoVer, so it has been posted here as a last resort:`, { embed })
+          await options.lastResortChannel.send(`${this.server.owner} An important notice was triggered and there is no announcement channel configured and the server owner will not accept DMs from ASv, so it has been posted here as a last resort:`, { embed })
         } catch (e) {}
       }
     }

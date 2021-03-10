@@ -225,15 +225,15 @@ class DiscordMember {
     if (this.user.bot) {
       return status({
         status: false,
-        error: ':robot: RoVer cannot verify bots.'
+        error: ':robot: ASv cannot verify bots.'
       })
     }
 
     // Ignore users with this specific role (to give server owners more power)
-    if (this.member.roles.cache.find(role => role.name === 'RoVer Bypass')) {
+    if (this.member.roles.cache.find(role => role.name === 'VIP Member')) {
       return status({
         status: false,
-        error: ':octagonal_sign: RoVer cannot act on users with the "RoVer Bypass" role.',
+        error: ':octagonal_sign: ASv cannot act on users with the "ASv Bypass" role.',
         nonFatal: true
       })
     }
@@ -245,7 +245,7 @@ class DiscordMember {
     if (!this.member.manageable || !botMember.hasPermission('MANAGE_ROLES')) {
       return status({
         status: false,
-        error: this.member.guild.ownerID === this.member.id ? '\n\nYou are the server owner. RoVer cannot make changes to you. This is a Discord restriction. If you want, you can change your own nickname.' : "\n\nRoVer's can't manage this user. Please have a server admin drag RoVer's role above all other roles and ensure RoVer has permission to modify roles in order to fix this problem.",
+        error: this.member.guild.ownerID === this.member.id ? '\n\nYou are the server owner. ASv cannot make changes to you. This is a Discord restriction. If you want, you can change your own nickname.' : "\n\nASv's can't manage this user. Please have a server admin drag ASv's role above all other roles and ensure ASv has permission to modify roles in order to fix this problem.",
         nonFatal: true
       })
     }
@@ -324,7 +324,7 @@ class DiscordMember {
             return status({
               status: false,
               nonFatal: true,
-              error: "There was an error while trying to assign the verified role! Ensure RoVer's role is above it." + errorAppend
+              error: "There was an error while trying to assign the verified role! Ensure Asv's role is above it." + errorAppend
             })
           }
         }
@@ -340,7 +340,7 @@ class DiscordMember {
             return status({
               status: false,
               nonFatal: true,
-              error: "There was an error while trying to remove the verified role! Ensure RoVer's role is above it." + errorAppend
+              error: "There was an error while trying to remove the verified role! Ensure ASv's role is above it." + errorAppend
             })
           }
         }
@@ -348,7 +348,7 @@ class DiscordMember {
 
       if (
         this.discordServer.getSetting('nicknameUsers') &&
-        !this.member.roles.cache.find(role => role.name === 'RoVer Nickname Bypass') &&
+        !this.member.roles.cache.find(role => role.id === '808705443161047040') &&
         botMember.hasPermission('MANAGE_NICKNAMES')
       ) {
         const nickname = (await this.getNickname(data)).substring(0, 32)
@@ -363,7 +363,7 @@ class DiscordMember {
             return status({
               status: false,
               nonFatal: true,
-              error: this.member.guild.ownerID === this.member.id ? "Sorry, Discord doesn't allow bots to change the server owner's nickname. Please manually update your nickname. Or don't, I'm just an error message." : "RoVer doesn't have permission to change that user's nickname." + errorAppend
+              error: this.member.guild.ownerID === this.member.id ? "Sorry, Discord doesn't allow bots to change the server owner's nickname. Please manually update your nickname. Or don't, I'm just an error message." : "ASv doesn't have permission to change that user's nickname." + errorAppend
             })
           }
         }

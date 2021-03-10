@@ -6,7 +6,7 @@ class NotVerifiedRoleCommand extends Command {
     super(client, {
       name: 'unverifiedrole',
       properName: 'UnverifiedRole',
-      aliases: ['roververifiedremovedrole', 'verifiedremovedrole', 'rovernotverifiedrole', 'notverifiedrole'],
+      aliases: ['aspverifiedremovedrole', 'verifiedremovedrole', 'asvnotverifiedrole', 'notverifiedrole'],
       description: '`<Discord Role>` Set the role that unverified users will get, and then lose when they verify. Default none',
 
       args: [

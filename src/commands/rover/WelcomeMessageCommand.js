@@ -6,7 +6,7 @@ class WelcomeMessageCommand extends Command {
     super(client, {
       name: 'welcomemessage',
       properName: 'WelcomeMessage',
-      aliases: ['roverwelcomemessage'],
+      aliases: ['asvwelcomemessage'],
       description: '`<Message>` Set the message the user gets when they join your server. This is only shown to verified members. Available replacements are %USERNAME%, %USERID%, %SERVER%, %DISCORDNAME%, and %DISCORDID%. Default: Welcome to %SERVER%, %USERNAME%!.',
 
       args: [

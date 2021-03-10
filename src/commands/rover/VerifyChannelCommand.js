@@ -6,7 +6,7 @@ class VerifyChannelCommand extends Command {
     super(client, {
       name: 'verifychannel',
       properName: 'VerifyChannel',
-      aliases: ['roververifychannel', 'verificationchannel'],
+      aliases: ['asvverifychannel', 'verificationchannel'],
       description: '`<Discord Channel>` Set a channel that the bot will delete all messages in except for verification messages. Default none.',
 
       args: [
@@ -27,7 +27,7 @@ class VerifyChannelCommand extends Command {
 
     if (channel) {
       this.server.setSetting('verifyChannel', channel.id)
-      msg.reply(`Set verify channel to ${channel}. Non-verification messages in this channel will be deleted if RoVer can manage messages.`)
+      msg.reply(`Set verify channel to ${channel}. Non-verification messages in this channel will be deleted if ASv can manage messages.`)
     } else {
       this.server.setSetting('verifyChannel', null)
       msg.reply('Removed verification channel. All messages are allowed to be sent in that channel now.')

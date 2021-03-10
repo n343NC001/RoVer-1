@@ -6,7 +6,7 @@ class VerifiedRoleCommand extends Command {
     super(client, {
       name: 'verifiedrole',
       properName: 'VerifiedRole',
-      aliases: ['roververifiedrole'],
+      aliases: ['asvverifiedrole'],
       description: '`<Discord Role>` Set the role that verified members will get. Default none',
 
       args: [

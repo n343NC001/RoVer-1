@@ -6,8 +6,8 @@ class NicknameFormatCommand extends Command {
     super(client, {
       name: 'nicknameformat',
       properName: 'NicknameFormat',
-      aliases: ['rovernicknameformat'],
-      description: "`<format>` Set the format RoVer will use when setting users' nicknames. Available replacements are %USERNAME%, %RANK%, %USERID%, %SERVER%, %DISCORDNAME%, and %DISCORDID%. Example:` %USERNAME% - (%USERID%)`. Default `%USERNAME%`.",
+      aliases: ['asvnicknameformat'],
+      description: "`<format>` Set the format ASv will use when setting users' nicknames. Available replacements are %USERNAME%, %RANK%, %USERID%, %SERVER%, %DISCORDNAME%, and %DISCORDID%. Example:` %USERNAME% - (%USERID%)`. Default `%USERNAME%`.",
 
       args: [
         {

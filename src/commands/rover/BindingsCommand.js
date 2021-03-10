@@ -8,7 +8,7 @@ class BindingsCommand extends Command {
     super(client, {
       name: 'bindings',
       properName: 'Bindings',
-      aliases: ['listbindings', 'roverbindings'],
+      aliases: ['listbindings', 'asvbindings'],
       description: 'Displays a list of bound roles'
     })
   }

@@ -6,7 +6,7 @@ class AnnounceChannelCommand extends Command {
     super(client, {
       name: 'announcechannel',
       properName: 'AnnounceChannel',
-      aliases: ['roverannouncechannel'],
+      aliases: ['asvannouncechannel'],
       description: '`<Discord Channel>` Set a channel that the bot will post a message to every time someone verifies. Default none.',
 
       args: [
